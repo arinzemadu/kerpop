@@ -440,6 +440,127 @@ main {
   border-color: var(--kp-accent);
 }
 
+/* CONTACT PAGE LAYOUT
+   -------------------------------------------------- */
+
+.kp-contact-page {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: flex-start;
+}
+
+/* Left column – form card */
+
+.kp-contact-card {
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid var(--kp-border);
+  padding: 20px 20px 22px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.04);
+}
+
+.kp-contact-card h2 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.kp-contact-lead {
+  margin: 0 0 16px;
+  font-size: 14px;
+  color: var(--kp-text-soft);
+}
+
+/* Form alignment */
+
+.kp-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.kp-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 18px;
+}
+
+.kp-contact-form label {
+  font-size: 13px;
+  display: block;
+}
+
+.kp-contact-form input,
+.kp-contact-form textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 9px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--kp-border);
+  font-family: inherit;
+  font-size: 13px;
+  background: #fffaf0;
+  color: var(--kp-text);
+  box-sizing: border-box;
+}
+
+.kp-contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.kp-contact-form input:focus,
+.kp-contact-form textarea:focus {
+  outline: none;
+  border-color: var(--kp-accent);
+  box-shadow: 0 0 0 1px var(--kp-accent-soft);
+  background: #ffffff;
+}
+
+.kp-btn-primary {
+  margin-top: 4px;
+}
+
+/* Right column – contact info */
+
+.kp-contact-aside {
+  align-self: stretch;
+  padding: 18px 20px;
+  border-radius: 18px;
+  border: 1px solid var(--kp-border);
+  background: #fffefb;
+  font-size: 14px;
+}
+
+.kp-contact-aside h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.kp-contact-line {
+  margin: 0 0 10px;
+  color: var(--kp-text-soft);
+}
+
+/* Responsive: stack form + aside on mobile */
+
+@media (max-width: 768px) {
+  .kp-contact-page {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .kp-contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 /* subtle fade-up on load */
 @keyframes kp-card-fadeUp {
   from {
