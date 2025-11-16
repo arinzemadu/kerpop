@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KERPOP • Contact</title>
+  <meta name="description" content="Contact KERPOP – a popcorn studio for modern hero flavours and custom projects." />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="kp-shell">
+    <header class="kp-header">
+      <div class="kp-header-main">
+        <a href="/" class="kp-logo-link" aria-label="Kerpop home">
+          <img src="/assets/kerpop-logo.png" alt="KERPOP logo" class="kp-logo" />
+        </a>
+        <nav class="kp-nav">
+          <a href="/">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="kp-contact-page">
+        <div class="kp-contact-card">
+          <h2>Contact form</h2>
+          <p class="kp-contact-lead">
+            Drop us a note and we’ll get back to you. Replace this with your real CRM / email handling
+            integration later.
+          </p>
+
+          <form class="kp-contact-form" method="post" action="#">
+            <div class="kp-contact-grid">
+              <label>
+                Name
+                <input type="text" name="name" required />
+              </label>
+              <label>
+                Company / Store
+                <input type="text" name="company" />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" required />
+              </label>
+              <label>
+                Phone / WhatsApp
+                <input type="tel" name="phone" />
+              </label>
+            </div>
+
+            <label>
+              Subject
+              <input type="text" name="subject" placeholder="Hero flavours, collaboration, wholesale…" />
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" rows="5" placeholder="Tell us what you have in mind."></textarea>
+            </label>
+
+            <button type="submit" class="kp-btn kp-btn-primary">Send message</button>
+          </form>
+        </div>
+
+        <aside class="kp-contact-aside">
+          <h3>Direct details</h3>
+          <p class="kp-contact-line">
+            Email: <a href="mailto:hello@kerpop.example">hello@kerpop.example</a>
+          </p>
+          <p class="kp-contact-line">
+            Phone / WhatsApp: <span>+44 (0) 0000 000 000</span>
+          </p>
+          <p class="kp-contact-line">
+            Studio location:<br />
+            <span>Kerpop Studio, Example Street, London</span>
+          </p>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="kp-footer">
+      <p class="kp-footer-text">
+        KERPOP · Popcorn studio template. Replace these contact details with your own.
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
