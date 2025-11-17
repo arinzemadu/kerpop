@@ -4,8 +4,8 @@
   --kp-text-soft: #7a6f64;
   --kp-border: #000;
   --kp-border-strong: #cfbea6;
-  --kp-accent: #f5685b;
-  --kp-accent-soft: #ffe0d7;
+  --kp-accent: #F49831;
+  --kp-accent-soft: #F49831;
   --kp-card-radius: 18px;
 }
 
@@ -54,7 +54,7 @@ a {
   justify-content: space-between;
   gap: 20px;
   padding: 10px 4px 12px;
-  border-bottom: 1px solid var(--kp-border);
+  border-bottom: 1px solid var(--kp-accent);
 }
 
 .kp-logo {
@@ -142,7 +142,7 @@ main {
   position: relative;
   border-radius: 32px;
   overflow: hidden;
-  border: 1px solid var(--kp-border);
+/*  border: 1px solid var(--kp-border);*/
   box-shadow: 0 26px 48px rgba(0, 0, 0, 0.24);
   background: #000;
   max-height: 520px;
@@ -182,8 +182,38 @@ main {
 }
 
 .kp-hero-copy--invert {
-  color: #f6eee4;
+  color: #F49831;
 }
+
+.kp-senses {
+  display: flex;
+  justify-content: center;   /* center the whole group */
+  align-items: center;
+  gap: 0.75rem;              /* smaller space between icons */
+  margin: 1.5rem 0;
+}
+
+.kp-sense-icon {
+  width: 80px;
+  height: auto;
+  display: block;
+  transition:
+    transform 200ms ease-out,
+    opacity 200ms ease-out,
+    box-shadow 200ms ease-out;
+}
+
+/* Optional hover styling from before */
+.kp-senses:hover .kp-sense-icon {
+  opacity: 0.7;
+}
+
+.kp-sense-icon:hover {
+  opacity: 1;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
 
 /* CATALOGUE / HERO FLAVOURS ----------------------------------------- */
 
@@ -502,7 +532,6 @@ main {
   border: 1px solid var(--kp-border);
   font-family: inherit;
   font-size: 13px;
-  background: #fffaf0;
   color: var(--kp-text);
   box-sizing: border-box;
 }
@@ -561,6 +590,8 @@ main {
   }
 }
 
+
+
 /* subtle fade-up on load */
 @keyframes kp-card-fadeUp {
   from {
@@ -578,7 +609,7 @@ main {
 .kp-footer {
   margin-top: 26px;
   padding-top: 12px;
-  border-top: 1px solid var(--kp-border);
+  border-top: 1px solid var(--kp-accent);
   font-size: 12px;
   color: var(--kp-text-soft);
 }
@@ -586,6 +617,7 @@ main {
 .kp-footer-text {
   margin: 0;
 }
+
 
 /* RESPONSIVE ---------------------------------------------------------- */
 
