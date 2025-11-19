@@ -1,13 +1,15 @@
 :root {
-  --kp-bg: #ffffff;
-  --kp-text: #221b17;
-  --kp-text-soft: #7a6f64;
-  --kp-border: #000;
-  --kp-border-strong: #cfbea6;
-  --kp-accent: #F49831;
-  --kp-accent-soft: #F49831;
-  --kp-card-radius: 18px;
+  --kp-bg: #FFFFFF;
+  --kp-text: #000000;
+  --kp-text-soft: #222222;
+  --kp-border: #000000;
+  --kp-border-strong: #F2F2F2;
+  --kp-accent: #F8C22C;
+  --kp-accent-soft: #F8C22C;
+  --kp-card-radius: 0;
+  --kp-divider: #000000;
 }
+
 
 * {
   box-sizing: border-box;
@@ -37,16 +39,23 @@ a {
 }
 
 .kp-shell {
-  max-width: 1120px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
   padding: 18px 18px 40px;
 }
+
 
 /* HEADER -------------------------------------------------------------- */
 
 .kp-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   margin-bottom: 10px;
+  background: var(--kp-bg);
 }
+
 
 .kp-header-main {
   display: flex;
@@ -54,8 +63,9 @@ a {
   justify-content: space-between;
   gap: 20px;
   padding: 10px 4px 12px;
-  border-bottom: 1px solid var(--kp-accent);
+  border-bottom: 1px solid var(--kp-divider);
 }
+
 
 .kp-logo {
   height: 42px;
@@ -123,7 +133,7 @@ main {
 }
 
 .kp-hero-image-wrap {
-  border-radius: 32px;
+  border-radius: 0;
   overflow: hidden;
   border: 1px solid var(--kp-border);
   box-shadow: 0 22px 40px rgba(0, 0, 0, 0.12);
@@ -140,7 +150,7 @@ main {
 
 .kp-hero-video-wrap {
   position: relative;
-  border-radius: 32px;
+  border-radius: 0;
   overflow: hidden;
 /*  border: 1px solid var(--kp-border);*/
   box-shadow: 0 26px 48px rgba(0, 0, 0, 0.24);
@@ -243,7 +253,7 @@ main {
 }
 
 .kp-card {
-  border-radius: var(--kp-card-radius);
+  border-radius: 0;
   padding: 14px 14px 16px;
   border: 1px solid var(--kp-border);
   background: #ffffff;
@@ -262,7 +272,7 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: inherit;
+  border-radius: 0;
   opacity: 0.5;
   pointer-events: none;
   mix-blend-mode: multiply;
@@ -364,7 +374,7 @@ main {
 }
 
 .kp-card-media {
-  border-radius: 14px;
+  border-radius: 0;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.04);
   background: rgba(255, 255, 255, 0.9);
@@ -429,7 +439,7 @@ main {
   gap: 4px;
   font-size: 12px;
   padding: 4px 9px;
-  border-radius: 999px;
+  border-radius: 0;
   border: 1px solid rgba(0, 0, 0, 0.04);
   background: rgba(255, 255, 255, 0.84);
 }
@@ -454,21 +464,24 @@ main {
   align-items: center;
   justify-content: center;
   padding: 6px 13px;
-  border-radius: 999px;
+  border-radius: 0;
   border: 1px solid var(--kp-accent-soft);
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   cursor: pointer;
-  background: transparent;
-  color: var(--kp-accent);
-  transition: background 160ms ease-out, border-color 160ms ease-out;
+  background: #000000;
+  color: #FFFFFF;
+  transition: background 160ms ease-out, border-color 160ms ease-out, color 160ms ease-out;
 }
 
+
 .kp-btn:hover {
-  background: var(--kp-accent-soft);
+  background: #FFFFFF;
   border-color: var(--kp-accent);
+  color: #000000;
 }
+
 
 /* CONTACT PAGE LAYOUT
    -------------------------------------------------- */
@@ -485,7 +498,7 @@ main {
 
 .kp-contact-card {
   background: #ffffff;
-  border-radius: 18px;
+  border-radius: 0;
   border: 1px solid var(--kp-border);
   padding: 20px 20px 22px;
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.04);
@@ -528,7 +541,7 @@ main {
   width: 100%;
   margin-top: 6px;
   padding: 9px 10px;
-  border-radius: 10px;
+  border-radius: 0;
   border: 1px solid var(--kp-border);
   font-family: inherit;
   font-size: 13px;
@@ -558,7 +571,7 @@ main {
 .kp-contact-aside {
   align-self: stretch;
   padding: 18px 20px;
-  border-radius: 18px;
+  border-radius: 0;
   border: 1px solid var(--kp-border);
   background: #fffefb;
   font-size: 14px;
@@ -608,15 +621,49 @@ main {
 
 .kp-footer {
   margin-top: 26px;
-  padding-top: 12px;
-  border-top: 1px solid var(--kp-accent);
+  padding: 18px 0 24px;
   font-size: 12px;
   color: var(--kp-text-soft);
+  text-align: center;
+}
+
+.kp-footer-divider {
+  height: 1px;
+  background: var(--kp-divider);
+  margin: 0 0 16px;
+}
+
+.kp-footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.kp-footer-label {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 10px;
+}
+
+.kp-footer-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  border: 1px solid var(--kp-accent-soft);
+  font-size: 11px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .kp-footer-text {
   margin: 0;
 }
+
 
 
 /* RESPONSIVE ---------------------------------------------------------- */
@@ -643,4 +690,23 @@ main {
   .kp-catalogue-list {
     grid-template-columns: minmax(0, 1fr);
   }
+}
+
+
+.kp-contact-checkbox {
+  margin-top: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.kp-contact-checkbox input {
+  margin-top: 3px;
+}
+
+.kp-nav-home .kp-home-icon {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
 }

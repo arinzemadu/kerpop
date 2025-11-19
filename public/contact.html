@@ -18,10 +18,14 @@
           <img src="/assets/kerpop-logo.png" alt="KERPOP logo" class="kp-logo" />
         </a>
         <nav class="kp-nav">
-          <a href="/">Home</a>
-          <a href="/about.html">About</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
+  <a href="/" class="kp-nav-home" aria-label="Home">
+    <span class="kp-home-icon" aria-hidden="true">⌂</span>
+  </a>
+  <a href="/about.html">About</a>
+  <a href="/mbc.html">MBC</a>
+  <a href="/flavour-lab.html">Flavour LAB</a>
+  <a href="/contact.html">Contact</a>
+</nav>
       </div>
     </header>
 
@@ -29,44 +33,40 @@
 
       <section class="kp-contact-page">
         <div class="kp-contact-card">
-          <h2>Contact form</h2>
+          <h2>Contact Kerpop</h2>
           <p class="kp-contact-lead">
             Drop us a note and we’ll get back to you. Replace this with your real CRM / email handling
             integration later.
           </p>
 
           <form class="kp-contact-form" method="post" action="#">
-            <div class="kp-contact-grid">
-              <label>
-                Name
-                <input type="text" name="name" required />
-              </label>
-              <label>
-                Company / Store
-                <input type="text" name="company" />
-              </label>
-              <label>
-                Email
-                <input type="email" name="email" required />
-              </label>
-              <label>
-                Phone / WhatsApp
-                <input type="tel" name="phone" />
-              </label>
-            </div>
+  <div class="kp-contact-grid">
+    <label>
+      Name
+      <input type="text" name="name" required />
+    </label>
+    <label>
+      Email
+      <input type="email" name="email" required />
+    </label>
+    <label>
+      Phone / WhatsApp
+      <input type="tel" name="phone" />
+    </label>
+  </div>
 
-            <label>
-              Subject
-              <input type="text" name="subject" placeholder="flavours, collaboration, wholesale…" />
-            </label>
+  <label>
+    Message
+    <textarea name="message" rows="5" placeholder="Tell us what you have in mind."></textarea>
+  </label>
 
-            <label>
-              Message
-              <textarea name="message" rows="5" placeholder="Tell us what you have in mind."></textarea>
-            </label>
+  <label class="kp-contact-checkbox">
+    <input type="checkbox" name="join_revolution" />
+    <span>Join the (popcorn) revolution &amp; stay up to date on what’s popping. This will add you to a periodic mailing list – new flavours, promotions and more.</span>
+  </label>
 
-            <button type="submit" class="kp-btn kp-btn-primary">Send message</button>
-          </form>
+  <button type="submit" class="kp-btn kp-btn-primary">Send message</button>
+</form>
         </div>
 
         <aside class="kp-contact-aside">
@@ -86,10 +86,17 @@
     </main>
 
     <footer class="kp-footer">
-      <p class="kp-footer-text">
-        KERPOP
-      </p>
-    </footer>
+  <div class="kp-footer-divider" aria-hidden="true"></div>
+  <div class="kp-footer-social">
+    <span class="kp-footer-label">Follow us on</span>
+    <a href="https://www.facebook.com/WatchTouchTaste/" class="kp-footer-icon kp-footer-icon--fb" target="_blank" rel="noopener noreferrer" aria-label="Kerpop on Facebook">Fb</a>
+    <a href="https://www.tiktok.com/@watchtouchtaste" class="kp-footer-icon kp-footer-icon--tt" target="_blank" rel="noopener noreferrer" aria-label="Kerpop on TikTok">Tt</a>
+    <a href="https://www.instagram.com/watchtouchtaste/" class="kp-footer-icon kp-footer-icon--ig" target="_blank" rel="noopener noreferrer" aria-label="Kerpop on Instagram">Ig</a>
+  </div>
+  <p class="kp-footer-text">© 2025 Copyright Kerpop Ltd</p>
+  <p class="kp-footer-text">Registered office: Kerpop Ltd, Kg Business Centre, Kingsfield Way, Northampton, NN5 7QN</p>
+  <p class="kp-footer-text">Company Registration number: 15762854</p>
+</footer>
   </div>
 </body>
 </html>
