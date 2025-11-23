@@ -9,6 +9,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
 </head>
 <body>
   <div class="kp-shell">
@@ -22,8 +27,6 @@
     <span class="kp-home-icon" aria-hidden="true">⌂</span>
   </a>
   <a href="/about.html">About</a>
-  <a href="/mbc.html">MBC</a>
-  <a href="/flavour-lab.html">Flavour LAB</a>
   <a href="/contact.html">Contact</a>
 </nav>
       </div>
@@ -31,12 +34,13 @@
 
     <main>
 
+      <h1>Contact Kerpop</h1>
+
       <section class="kp-contact-page">
         <div class="kp-contact-card">
-          <h2>Contact Kerpop</h2>
+          
           <p class="kp-contact-lead">
-            Drop us a note and we’ll get back to you. Replace this with your real CRM / email handling
-            integration later.
+            Drop us a note and we’ll get back to you.
           </p>
 
           <form class="kp-contact-form" method="post" action="#">
@@ -50,7 +54,7 @@
       <input type="email" name="email" required />
     </label>
     <label>
-      Phone / WhatsApp
+      Phone
       <input type="tel" name="phone" />
     </label>
   </div>
@@ -69,19 +73,34 @@
 </form>
         </div>
 
-        <aside class="kp-contact-aside">
-          <h3>Direct details</h3>
-          <p class="kp-contact-line">
-            Email: <a href="mailto:hello@kerpop.example">hello@kerpop.example</a>
-          </p>
-<!--           <p class="kp-contact-line">
-            Phone / WhatsApp: <span>+44 (0) 0000 000 000</span>
-          </p>
-          <p class="kp-contact-line">
-            Studio location:<br />
-            <span>Kerpop Studio, Example Street, London</span>
-          </p> -->
-        </aside>
+<aside class="kp-contact-aside">
+  <h3>Direct details</h3>
+
+  <p class="kp-contact-line">
+    Email: <a href="mailto:hello@kerpop.com">hello@kerpop.com</a>
+  </p>
+
+  <p class="kp-contact-line">
+    Studio location:<br />
+    <span>Kerpop Ltd, Kg Business Centre, Kingsfield Way, Northampton, NN5 7QN</span>
+  </p>
+
+  <div class="kp-map">
+    <iframe
+      title="Kerpop Ltd location on Google Maps"
+      src="https://www.google.com/maps?q=Kerpop%20Ltd%2C%20Kg%20Business%20Centre%2C%20Kingsfield%20Way%2C%20Northampton%2C%20NN5%207QN&output=embed"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <p class="kp-contact-line kp-contact-reg">
+    Company Registration number: <span>15762854</span>
+  </p>
+</aside>
+
+
       </section>
     </main>
 
@@ -89,9 +108,27 @@
   <div class="kp-footer-divider" aria-hidden="true"></div>
   <div class="kp-footer-social">
     <span class="kp-footer-label">Follow us on</span>
-    <a href="https://www.facebook.com/WatchTouchTaste/" class="kp-footer-icon kp-footer-icon--fb" target="_blank" rel="noopener noreferrer" aria-label="Kerpop on Facebook">Fb</a>
-    <a href="https://www.tiktok.com/@watchtouchtaste" class="kp-footer-icon kp-footer-icon--tt" target="_blank" rel="noopener noreferrer" aria-label="Kerpop on TikTok">Tt</a>
-    <a href="https://www.instagram.com/watchtouchtaste/" class="kp-footer-icon kp-footer-icon--ig" target="_blank" rel="noopener noreferrer" aria-label="Kerpop on Instagram">Ig</a>
+<a href="https://www.facebook.com/WatchTouchTaste/"
+   class="kp-footer-icon kp-footer-icon--fb"
+   target="_blank" rel="noopener noreferrer"
+   aria-label="Kerpop on Facebook">
+  <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+</a>
+
+<a href="https://www.tiktok.com/@watchtouchtaste"
+   class="kp-footer-icon kp-footer-icon--tt"
+   target="_blank" rel="noopener noreferrer"
+   aria-label="Kerpop on TikTok">
+  <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+</a>
+
+<a href="https://www.instagram.com/watchtouchtaste/"
+   class="kp-footer-icon kp-footer-icon--ig"
+   target="_blank" rel="noopener noreferrer"
+   aria-label="Kerpop on Instagram">
+  <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+</a>
+
   </div>
   <p class="kp-footer-text">© 2025 Copyright Kerpop Ltd</p>
   <p class="kp-footer-text">Registered office: Kerpop Ltd, Kg Business Centre, Kingsfield Way, Northampton, NN5 7QN</p>

@@ -487,7 +487,6 @@ main {
    -------------------------------------------------- */
 
 .kp-contact-page {
-  margin-top: 32px;
   display: grid;
   grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr);
   gap: 32px;
@@ -652,13 +651,23 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 24px;
-  height: 24px;
+  width: 28px;            /* was min-width */
+  height: 28px;           /* was 24px */
   border: 1px solid var(--kp-accent-soft);
-  font-size: 11px;
+  font-size: 14px;        /* icon size */
+  line-height: 1;
   text-decoration: none;
   color: inherit;
+  transition: transform 160ms ease, background 160ms ease, color 160ms ease, border-color 160ms ease;
 }
+
+.kp-footer-icon:hover {
+  transform: translateY(-2px);
+  background: var(--kp-accent);
+  color: #000;
+  border-color: var(--kp-accent);
+}
+
 
 .kp-footer-text {
   margin: 0;
@@ -707,6 +716,61 @@ main {
 
 .kp-nav-home .kp-home-icon {
   display: inline-block;
-  font-size: 16px;
+  font-size: 22px;
   line-height: 1;
 }
+
+/* Contact page map */
+.kp-map {
+  margin-top: 1rem;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.kp-map iframe {
+  width: 100%;
+  height: 320px;
+  border: 0;
+  display: block;
+}
+
+
+/* --- OVERRIDES: About page sense icons --- */
+
+/* keep the row centered */
+.kp-senses {
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/* make all icons identical size */
+.kp-sense-icon {
+  width: 80px;
+  height: 80px;          /* force equal height */
+  object-fit: contain;   /* don't distort */
+  padding: 8px;          /* gives room for hover background */
+  background: transparent;
+  border-radius: 0;      /* matches footer */
+  box-shadow: none;
+
+  /* match footer transition timing */
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease, opacity 160ms ease;
+}
+
+/* remove the "fade others" effect */
+.kp-senses:hover .kp-sense-icon {
+  opacity: 1;
+}
+
+/* match footer hover feel */
+.kp-sense-icon:hover {
+  transform: translateY(-2px);     /* same as footer */
+  background: var(--kp-accent);    /* same highlight */
+  border-color: var(--kp-accent);  /* same border change */
+  opacity: 1;
+}
+.kp-senses:hover .kp-sense-icon {
+  opacity: 0.7;
+}
+
